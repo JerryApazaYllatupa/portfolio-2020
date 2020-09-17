@@ -1,0 +1,47 @@
+@import './00_Library/includes';
+
+
+
+/* @font-face {
+  font-family: myLetter;
+  font-display: auto;
+  src: url(font/The-Sunset.woff2) format('woff2');
+} */
+
+:root {
+  --primary: #003964;
+  --secondary: #001830;
+  --graylight: #F1F1F1;
+  --gray: #555D66;
+  --transparent: rgba(0, 0, 0, 0.0);
+  --colorHover: #0073aa;
+  --colortitle: #b9b5b5;
+  --colortext: #525252;
+  --lightwhite: #e1dcdc;
+
+  //variables secundarys
+  --heightheader: 35px;
+  --widthaside: 160px;
+  --widthasideright: 260px;
+  --widthcontent: calc(100% - var(--widthasideright));
+  --fontfamily: myLetter;
+  --fonttitle: 'Bad Script', cursive;
+  --fontlato: 'Lato', sans-serif;
+}
+
+// Globlas
+$container: container;
+
+// Fonts
+$font: var(--fontfamily);
+$fonttitle: var(--fonttitle);
+$fontlato: var(--fontlato);
+
+//Colors scss
+$lightblue: var(--lightblue);
+$black: var(--black);
+$colortext: var(--colortext);
+$lightwhite: var(--lightwhite);
+$colortitle: var(--colorTitle);
+$lightgray:var(--lightgray);
+$trasparent: var(--transparent);
