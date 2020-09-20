@@ -1,47 +1,237 @@
 @import './00_Library/includes';
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 
 
-
-/* @font-face {
-  font-family: myLetter;
-  font-display: auto;
-  src: url(font/The-Sunset.woff2) format('woff2');
-} */
+/* 
+ In this part I declare the global variables
+*/
 
 :root {
-  --primary: #003964;
-  --secondary: #001830;
-  --graylight: #F1F1F1;
-  --gray: #555D66;
-  --transparent: rgba(0, 0, 0, 0.0);
-  --colorHover: #0073aa;
-  --colortitle: #b9b5b5;
-  --colortext: #525252;
-  --lightwhite: #e1dcdc;
 
-  //variables secundarys
-  --heightheader: 35px;
-  --widthaside: 160px;
+  // primary variables
+  --colorPrimary: #08484D;
+  --colorPrimaryLigth: #097E86;
+  --colorSecondary: #0F2F46;
+  --colorHover: #00bfff;
+  --colorText: #686868;
+  --colorTextBg: #fff;
+  --transparent: rgba(0, 0, 0, 0.0);
+
+  //secondary variables
+  --maxWith: 1300px;
+  --widthaside: 300px;
   --widthasideright: 260px;
   --widthcontent: calc(100% - var(--widthasideright));
-  --fontfamily: myLetter;
-  --fonttitle: 'Bad Script', cursive;
-  --fontlato: 'Lato', sans-serif;
+  --fontFamily: 'Kurale', serif;
+  --fontText: 'Monospase';
 }
 
-// Globlas
-$container: container;
+// scss variables
+$font: var(--fontFamily);
+$cPrimary: var(--colorPrimary);
+$cPrimaryLight: var(--colorPrimaryLigth);
+$cSecondary: var(--colorSecondary);
+$cText: var(--colorText);
+$cHover: var(--colorHover);
+$cTextBg:var(--colorTextBg);
+$whitAside:var(--widthaside);
+$fontText: var(--fontText);
+$maxWith: var(--maxWith);
 
-// Fonts
-$font: var(--fontfamily);
-$fonttitle: var(--fonttitle);
-$fontlato: var(--fontlato);
+/* 
+----------------------------------------------------------------------
+------------ STAR WHIT DESING--------------------
+----------------------------------------------------------------------
+*/
 
-//Colors scss
-$lightblue: var(--lightblue);
-$black: var(--black);
-$colortext: var(--colortext);
-$lightwhite: var(--lightwhite);
-$colortitle: var(--colorTitle);
-$lightgray:var(--lightgray);
-$trasparent: var(--transparent);
+body {
+  font-family: $font;
+}
+
+p {
+  font-family: $fontText;
+}
+
+.body-box {
+  .icon-hamburger {
+    display: block;
+    font-size: 2em;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover .fa {
+      color: $cPrimary;
+    }
+
+    & .fa {
+      color: white;
+
+    }
+
+    @include from {
+      display: none;
+    }
+  }
+
+}
+
+.header-box {
+  color: $cTextBg;
+  position: fixed;
+  width: $whitAside;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $cPrimary;
+  display: none;
+
+  @include from {
+    display: block;
+  }
+}
+
+
+.header-box {
+  & ul {
+    list-style-type: none;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & .span-icon.fa {
+    color: white;
+  }
+
+  & .avatar {
+    @include centerFlex;
+
+    &-img {
+
+      width: 135px;
+      height: 135px;
+
+      .img-perfil {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  & .contact {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: auto auto 2em auto;
+    justify-items: center;
+    width: 80%;
+
+    & a {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: $cPrimaryLight;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 1.3em;
+      padding: 1em;
+
+      &:hover span {
+        color: $cHover;
+      }
+    }
+  }
+
+  & .menu {
+    &-ul {
+      display: grid;
+      grid-gap: 2em;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      width: 80%;
+      margin: auto;
+    }
+
+    .menu-item {
+      a {
+        color: white;
+        font-size: 1.2em;
+      }
+
+      .span-icon {
+        margin-right: .5em;
+      }
+
+      &:hover a {
+        color: $cHover;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.main-box {
+  @include from {
+    margin-left: 300px;
+  }
+}
+
+/* 
+ This Section Slider
+*/
+.slider {
+  position: relative;
+
+  &-photo {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  &-text {
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include centerFlex;
+
+    &__name {
+      font-size: 2em;
+
+      @include from(l) {
+
+        font-size: 5em;
+      }
+
+    }
+  }
+}
+
+/* 
+ This Section About
+
+*/
+.about {
+
+  padding: 1em;
+  margin: auto;
+
+  @include from {
+    max-width: $maxWith;
+  }
+}

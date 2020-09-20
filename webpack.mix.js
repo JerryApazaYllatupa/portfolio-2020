@@ -12,6 +12,7 @@ mix.pug = require('laravel-mix-pug');
  */
 
 mix
+  .setPublicPath('dist')
   .js("src/js/app.js", "dist/js")
   .pug('src/*.pug', '../dist', {
     pug: {
@@ -24,8 +25,12 @@ mix
     server: 'dist',
     files: ['src/js/**/*.js', 'src/scss/**/*.scss', 'src/*.pug'],
     open: false
-  });
-
+  })
+ /*  .options({
+  processCssUrls: true,
+  purifyCss: false,
+  postCss: []
+}); */
 
 // Full API
 // mix.js(src, output);

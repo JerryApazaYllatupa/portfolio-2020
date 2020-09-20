@@ -2,7 +2,9 @@
 @function exists($key) {
   @if (map-get($breakpoints, $key)) {
     @return true;
-  } @else {
+  }
+
+  @else {
     @return false;
   }
 }
@@ -17,12 +19,16 @@
   @if exists($from) {
     @if $from==s {
       @content;
-    } @else {
+    }
+
+    @else {
       @media screen and (min-width: getbp($from)) {
         @content;
       }
     }
-  } @else {
+  }
+
+  @else {
     @error "No existe la palabra clave, Utiliza estes parametros from(m || l || lg || xl)";
   }
 }
@@ -33,12 +39,16 @@
   @if exists($to) {
     @if $to==s {
       @content;
-    } @else {
+    }
+
+    @else {
       @media screen and(max-width:getbp($to)-1px) {
         @content;
       }
     }
-  } @else {
+  }
+
+  @else {
     @error "No existe la palabra clave, Utiliza estes parametros from(m || l || lg || xl)";
   }
 }
@@ -50,7 +60,9 @@
       @media screen and (min-width: getbp($from)) and (max-width: getbp($to) - 1px) {
         @content;
       }
-    } @else {
+    }
+
+    @else {
       @error "El segundo argumento del mixin fromTo debe ser mayor que el primero";
     }
   }

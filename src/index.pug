@@ -5,5 +5,63 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     link(rel="stylesheet", href="css/app.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
   body
-    h1 Hola mundo este es el titulo en pug  
+    .body-box
+      .icon-hamburger
+        span.fa.fa-bars
+      header.header-box
+        .avatar
+          .avatar-img
+            img.img-perfil(src="img/avatar.jpg", alt="Jerry-apaza")
+          h2 Jerry Apaza
+        .contact
+          a(href="http://")
+            span.span-icon.fa.fa-instagram
+          a(href="http://")
+            span.span-icon.fa.fa-linkedin
+          a(href="http://")
+            span.span-icon.fa.fa-github
+          a(href="http://")
+            span.span-icon.fa.fa-envelope
+
+        .menu
+          ul.menu-ul
+            li.menu-item
+              a(href="#") 
+                span.span-icon.fa.fa-home
+                span Home
+            li.menu-item
+              a(href="#") 
+                span.span-icon.fa.fa-user
+                span About
+            li.menu-item
+              a(href="#") 
+                span.span-icon.fa.fa-file-text
+                span Resume
+            li.menu-item
+              a(href="#") 
+                span.span-icon.fa.fa-briefcase
+                span Portafolio
+            li.menu-item
+              a(href="#")
+                span.span-icon.fa.fa-database  
+                span Services
+            li.menu-item
+              a(href="#")
+                span.span-icon.fa.fa-envelope
+                span Contact 
+          
+        .footer
+          p © Copyright and 
+          p Designed by jerryapaza
+      main.main-box
+        .box-container
+          section.slider
+            img.slider-photo(src="img/photo-man.jpg", alt="Jerry Apaza")
+            .slider-text
+              h1.slider-text__name Jerry Apaza
+              h2.slier-text__description Desarrollador Web y Programador
+          section.about
+            h2  About
+            p Me encanta solucinar problemas y estar en desafios todo el tiempo, mi pasion por la tecnologia me llevado especialzarme en el desarrollo web y la progamación para asi poder aportar soluciones y afrontar retos 
