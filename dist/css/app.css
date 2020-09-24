@@ -422,11 +422,19 @@ p {
 
 .text-p {
   color: var(--colorText);
+  text-align: center;
 }
 
 .text-title {
   color: var(--colorSecondary);
-  font-size: 2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  .text-title {
+    font-size: 2em;
+  }
 }
 
 .title-2 {
@@ -620,13 +628,20 @@ p {
   display: flex;
   justify-content: space-around;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .about-values .values-text {
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   color: var(--colorTextWhite);
   background-color: var(--colorPrimaryLigth);
   border-radius: 50px;
+}
+
+@media screen and (min-width: 640px) {
+  .about-values .values-text {
+    padding: 1em 2em;
+  }
 }
 
 .about-values .values-line {
@@ -643,10 +658,8 @@ p {
 }
 
 .information-box {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  justify-content: center;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--colorBg);
   border-radius: 10px;
   padding: 2em;
@@ -655,12 +668,13 @@ p {
 
 .information-box .info-box {
   display: grid;
-  grid-gap: 1em;
+  width: 300px;
 }
 
 .information-box .info-box a {
   color: var(--colorText);
   text-decoration: none;
+  margin: 0.5em;
 }
 
 .information-box .info-box .info-icon {
@@ -669,19 +683,25 @@ p {
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 640px) {
+  .information-box {
+    padding: 1em;
+    justify-content: space-around;
+  }
+}
+
 /* 
  ======= This Section skills ==========
 */
 
 .skill-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 1em;
+  justify-content: center;
 }
 
 .skill-box .skill-container {
-  padding: 1em 0.5em;
-  width: 100%;
+  padding: 1em 2em;
   background-color: var(--colorBg);
   text-align: center;
   border-radius: 10px;
@@ -691,6 +711,13 @@ p {
 .skill-box .skill-container .skill-icon {
   font-size: 4em;
   color: var(--colorPrimaryLigth);
+}
+
+@media screen and (min-width: 640px) {
+  .skill-box {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5em;
+  }
 }
 
 /* 
@@ -731,7 +758,7 @@ p {
 
 .portfolio .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1em;
 }
 
@@ -767,12 +794,15 @@ p {
 .services-content {
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2em;
 }
 
 .services-item {
   text-align: center;
+  border: 2px solid var(--colorPrimaryLigth);
+  border-radius: 10px;
+  padding: 0.8em;
 }
 
 .services-item .text-p {
@@ -796,8 +826,13 @@ p {
 
 .contact-box {
   display: grid;
-  grid-template-columns: 40% auto;
   grid-gap: 1em;
+}
+
+@media screen and (min-width: 640px) {
+  .contact-box {
+    grid-template-columns: 40% auto;
+  }
 }
 
 .contact-content {
@@ -813,12 +848,13 @@ p {
   align-items: center;
 }
 
-.contact-item__text {
-  margin-left: 0.8em;
+.contact .text-title {
+  margin: 0;
+  text-align: start;
 }
 
-.contact-item__text .text-title {
-  margin: 0;
+.contact-item__text {
+  margin-left: 0.8em;
 }
 
 .contact-item__text .text-p {
@@ -839,6 +875,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact-google-maps {
+  width: 100%;
+  height: auto;
 }
 
 .contact-form__item {

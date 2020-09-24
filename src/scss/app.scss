@@ -54,11 +54,18 @@ p {
 
 .text-p {
   color: $cText;
+  text-align: center;
 }
 
 .text-title {
   color: $cSecondary;
-  font-size: 2em;
+  font-size: 1.5em;
+  text-align: center;
+
+  @include from {
+    font-size: 2em;
+
+  }
 }
 
 .title-2 {
@@ -245,12 +252,18 @@ p {
   display: flex;
   justify-content: space-around;
   position: relative;
+  flex-wrap: wrap;
 
   .values-text {
-    padding: 1em 2em;
+    padding: .5em 2em;
     color: $cTextWhite;
     background-color: $cPrimaryLight;
     border-radius: 50px;
+
+    @include from {
+      padding: 1em 2em;
+
+    }
   }
 
   .values-line {
@@ -265,13 +278,13 @@ p {
     z-index: -1;
     border-radius: 10px;
   }
+
 }
 
 .information-box {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  justify-content: center;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
   background-color: $cBg;
   border-radius: 10px;
   padding: 2em;
@@ -279,11 +292,12 @@ p {
 
   .info-box {
     display: grid;
-    grid-gap: 1em;
+    width: 300px;
 
     a {
       color: $cText;
       text-decoration: none;
+      margin: .5em;
     }
 
     .info-icon {
@@ -292,6 +306,11 @@ p {
       font-size: 1.5em;
     }
   }
+
+  @include from {
+    padding: 1em;
+    justify-content: space-around;
+  }
 }
 
 /* 
@@ -299,12 +318,12 @@ p {
 */
 .skill-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
   grid-gap: 1em;
+  justify-content: center;
 
   .skill-container {
-    padding: 1em 0.5em;
-    width: 100%;
+    padding: 1em 2em;
     background-color: $cBg;
     text-align: center;
     border-radius: 10px;
@@ -314,6 +333,11 @@ p {
       font-size: 4em;
       color: $cPrimaryLight;
     }
+  }
+
+  @include from {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5em;
   }
 }
 
@@ -357,7 +381,7 @@ p {
 .portfolio {
   .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1em;
   }
 
@@ -400,12 +424,15 @@ p {
   &-content {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2em;
   }
 
   &-item {
     text-align: center;
+    border: 2px solid $cPrimaryLight;
+    border-radius: 10px;
+    padding: .8em;
 
     .text-p {
       text-align: justify;
@@ -431,8 +458,11 @@ p {
 .contact {
   &-box {
     display: grid;
-    grid-template-columns: 40% auto;
     grid-gap: 1em;
+
+    @include from {
+      grid-template-columns: 40% auto;
+    }
   }
 
   &-content {
@@ -448,12 +478,15 @@ p {
     }
   }
 
+  .text-title {
+    margin: 0;
+    text-align: start;
+  }
+
   &-item__text {
     margin-left: .8em;
 
-    .text-title {
-      margin: 0;
-    }
+
 
     .text-p {
       margin: 5px;
@@ -476,13 +509,15 @@ p {
     }
   }
 
+  &-google-maps {
+    width: 100%;
+    height: auto;
+  }
+
   &-form {
     &__item {
       display: grid;
 
-      // label {
-      //   margin: .3em 0;
-      // }
 
       .form-input {
         background: $cTextWhite;
