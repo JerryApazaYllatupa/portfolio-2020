@@ -390,13 +390,14 @@ template {
 */
 
 :root {
-  --colorPrimary: #08484D;
-  --colorPrimaryLigth: #097E86;
-  --colorSecondary: #0F2F46;
+  --colorPrimary: #08484d;
+  --colorPrimaryLigth: #097e86;
+  --colorSecondary: #235171;
   --colorHover: #00bfff;
   --colorText: #686868;
-  --colorTextBg: #fff;
-  --transparent: rgba(0, 0, 0, 0.0);
+  --colorTextWhite: #fff;
+  --colorBg: #f4f4f4;
+  --transparent: rgba(0, 0, 0, 0);
   --maxWith: 1300px;
   --widthaside: 300px;
   --widthasideright: 260px;
@@ -417,6 +418,30 @@ body {
 
 p {
   font-family: var(--fontText);
+}
+
+.text-p {
+  color: var(--colorText);
+}
+
+.text-title {
+  color: var(--colorSecondary);
+  font-size: 2em;
+}
+
+.title-2 {
+  font-size: 1.3em;
+}
+
+.section-container {
+  padding: 1em;
+  margin: auto;
+}
+
+@media screen and (min-width: 640px) {
+  .section-container {
+    max-width: var(--maxWith);
+  }
 }
 
 .body-box .icon-hamburger {
@@ -442,7 +467,7 @@ p {
 }
 
 .header-box {
-  color: var(--colorTextBg);
+  color: var(--colorTextWhite);
   position: fixed;
   width: var(--widthaside);
   top: 0;
@@ -551,7 +576,7 @@ p {
 }
 
 /* 
- This Section Slider
+ =========This Section Slider========
 */
 
 .slider {
@@ -564,7 +589,7 @@ p {
 }
 
 .slider-text {
-  color: white;
+  color: var(--colorTextWhite);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -587,18 +612,256 @@ p {
 }
 
 /* 
- This Section About
+ ========This Section About========
 
 */
 
-.about {
-  padding: 1em;
-  margin: auto;
+.about-values {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 }
 
-@media screen and (min-width: 640px) {
-  .about {
-    max-width: var(--maxWith);
-  }
+.about-values .values-text {
+  padding: 1em 2em;
+  color: var(--colorTextWhite);
+  background-color: var(--colorPrimaryLigth);
+  border-radius: 50px;
+}
+
+.about-values .values-line {
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 5px;
+  background-color: var(--colorPrimaryLigth);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.information-box {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--colorBg);
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.information-box .info-box {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.information-box .info-box a {
+  color: var(--colorText);
+  text-decoration: none;
+}
+
+.information-box .info-box .info-icon {
+  color: var(--colorPrimaryLigth);
+  margin-right: 0.5em;
+  font-size: 1.5em;
+}
+
+/* 
+ ======= This Section skills ==========
+*/
+
+.skill-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 1em;
+}
+
+.skill-box .skill-container {
+  padding: 1em 0.5em;
+  width: 100%;
+  background-color: var(--colorBg);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.skill-box .skill-container .skill-icon {
+  font-size: 4em;
+  color: var(--colorPrimaryLigth);
+}
+
+/* 
+ ======= This Section skills ==========
+*/
+
+.resume .resume-content {
+  text-align: center;
+}
+
+.resume .resume-icon {
+  font-size: 5em;
+  color: var(--colorPrimaryLigth);
+  border: 2px solid;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  padding: 0.3em;
+}
+
+.resume .resume-icon__especial {
+  font-size: 4.2em;
+}
+
+.resume .resume-line {
+  width: 3px;
+  height: 50px;
+  background-color: var(--colorPrimaryLigth);
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+  border-radius: 2px;
+}
+
+/* 
+ ======= This Section Portfolio ==========
+*/
+
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 1em;
+}
+
+.portfolio .portfolio-box {
+  border-radius: 0.8em;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--colorBg);
+  padding: 1em;
+}
+
+.portfolio .portfolio-buttons__link {
+  color: var(--colorTextWhite);
+}
+
+.portfolio .portfolio-icon {
+  background-color: var(--colorPrimaryLigth);
+  border-radius: 50%;
+  font-size: 1.5em;
+  padding: 0.4em;
+  margin: 0 1em;
+}
+
+.portfolio .portfolio-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+ ======= This Section Services ==========
+*/
+
+.services-content {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 2em;
+}
+
+.services-item {
+  text-align: center;
+}
+
+.services-item .text-p {
+  text-align: justify;
+}
+
+.services-icon {
+  color: var(--colorTextWhite);
+  background-color: var(--colorPrimaryLigth);
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.services-icon.fa {
+  font-size: 2.5em;
+}
+
+/* 
+ ======= This Section Contact ==========
+*/
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-gap: 1em;
+}
+
+.contact-content {
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--colorBg);
+}
+
+.contact-content__item {
+  display: flex;
+  margin: 1em 0.5em;
+  align-items: center;
+}
+
+.contact-item__text {
+  margin-left: 0.8em;
+}
+
+.contact-item__text .text-title {
+  margin: 0;
+}
+
+.contact-item__text .text-p {
+  margin: 5px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--colorTextWhite);
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: var(--colorPrimaryLigth);
+}
+
+.contact-icon.fa {
+  font-size: 1.3em !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form__item {
+  display: grid;
+}
+
+.contact-form__item .form-input {
+  background: var(--colorTextWhite);
+  border: 1px solid var(--colorPrimaryLigth);
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0.3em 0 1em;
+}
+
+.contact-form__item .form-button {
+  background-color: var(--colorPrimaryLigth);
+  border-radius: 5px;
+  padding: 0.5em;
+  color: var(--colorTextWhite);
+  border: none;
+}
+
+.contact-form__item .form-button:hover {
+  background-color: var(--colorPrimary);
 }
 

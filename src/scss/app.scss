@@ -1,21 +1,20 @@
 @import './00_Library/includes';
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 
-
 /* 
  In this part I declare the global variables
 */
 
 :root {
-
   // primary variables
-  --colorPrimary: #08484D;
-  --colorPrimaryLigth: #097E86;
-  --colorSecondary: #0F2F46;
+  --colorPrimary: #08484d;
+  --colorPrimaryLigth: #097e86;
+  --colorSecondary: #235171;
   --colorHover: #00bfff;
   --colorText: #686868;
-  --colorTextBg: #fff;
-  --transparent: rgba(0, 0, 0, 0.0);
+  --colorTextWhite: #fff;
+  --colorBg: #f4f4f4;
+  --transparent: rgba(0, 0, 0, 0);
 
   //secondary variables
   --maxWith: 1300px;
@@ -31,10 +30,11 @@ $font: var(--fontFamily);
 $cPrimary: var(--colorPrimary);
 $cPrimaryLight: var(--colorPrimaryLigth);
 $cSecondary: var(--colorSecondary);
+$cBg: var(--colorBg);
 $cText: var(--colorText);
 $cHover: var(--colorHover);
-$cTextBg:var(--colorTextBg);
-$whitAside:var(--widthaside);
+$cTextWhite: var(--colorTextWhite);
+$whitAside: var(--widthaside);
 $fontText: var(--fontText);
 $maxWith: var(--maxWith);
 
@@ -52,6 +52,28 @@ p {
   font-family: $fontText;
 }
 
+.text-p {
+  color: $cText;
+}
+
+.text-title {
+  color: $cSecondary;
+  font-size: 2em;
+}
+
+.title-2 {
+  font-size: 1.3em;
+}
+
+.section-container {
+  padding: 1em;
+  margin: auto;
+
+  @include from {
+    max-width: $maxWith;
+  }
+}
+
 .body-box {
   .icon-hamburger {
     display: block;
@@ -66,18 +88,16 @@ p {
 
     & .fa {
       color: white;
-
     }
 
     @include from {
       display: none;
     }
   }
-
 }
 
 .header-box {
-  color: $cTextBg;
+  color: $cTextWhite;
   position: fixed;
   width: $whitAside;
   top: 0;
@@ -90,7 +110,6 @@ p {
     display: block;
   }
 }
-
 
 .header-box {
   & ul {
@@ -109,7 +128,6 @@ p {
     @include centerFlex;
 
     &-img {
-
       width: 135px;
       height: 135px;
 
@@ -165,7 +183,7 @@ p {
       }
 
       .span-icon {
-        margin-right: .5em;
+        margin-right: 0.5em;
       }
 
       &:hover a {
@@ -189,7 +207,7 @@ p {
 }
 
 /* 
- This Section Slider
+ =========This Section Slider========
 */
 .slider {
   position: relative;
@@ -199,10 +217,8 @@ p {
     height: auto;
   }
 
-
-
   &-text {
-    color: white;
+    color: $cTextWhite;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -214,24 +230,281 @@ p {
       font-size: 2em;
 
       @include from(l) {
-
         font-size: 5em;
       }
-
     }
   }
 }
 
 /* 
- This Section About
+ ========This Section About========
 
 */
-.about {
 
-  padding: 1em;
-  margin: auto;
+.about-values {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 
-  @include from {
-    max-width: $maxWith;
+  .values-text {
+    padding: 1em 2em;
+    color: $cTextWhite;
+    background-color: $cPrimaryLight;
+    border-radius: 50px;
+  }
+
+  .values-line {
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 5px;
+    background-color: $cPrimaryLight;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    border-radius: 10px;
+  }
+}
+
+.information-box {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: center;
+  justify-items: center;
+  background-color: $cBg;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .info-box {
+    display: grid;
+    grid-gap: 1em;
+
+    a {
+      color: $cText;
+      text-decoration: none;
+    }
+
+    .info-icon {
+      color: $cPrimaryLight;
+      margin-right: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+/* 
+ ======= This Section skills ==========
+*/
+.skill-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 1em;
+
+  .skill-container {
+    padding: 1em 0.5em;
+    width: 100%;
+    background-color: $cBg;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .skill-icon {
+      font-size: 4em;
+      color: $cPrimaryLight;
+    }
+  }
+}
+
+/* 
+ ======= This Section skills ==========
+*/
+.resume {
+  .resume-content {
+    text-align: center;
+  }
+
+  .resume-icon {
+    font-size: 5em;
+    color: $cPrimaryLight;
+    border: 2px solid;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    padding: 0.3em;
+  }
+
+  .resume-icon__especial {
+    font-size: 4.2em;
+  }
+
+  .resume-line {
+    width: 3px;
+    height: 50px;
+    background-color: $cPrimaryLight;
+    display: block;
+    text-align: center;
+    margin: 1em auto;
+    border-radius: 2px;
+  }
+}
+
+/* 
+ ======= This Section Portfolio ==========
+*/
+
+.portfolio {
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 1em;
+  }
+
+  .portfolio-box {
+    border-radius: 0.8em;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $cBg;
+
+    padding: 1em;
+  }
+
+
+
+  .portfolio-buttons {
+    &__link {
+      color: $cTextWhite;
+    }
+  }
+
+  .portfolio-icon {
+    background-color: $cPrimaryLight;
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 0.4em;
+    margin: 0 1em;
+  }
+
+  .portfolio-img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* 
+ ======= This Section Services ==========
+*/
+
+.services {
+  &-content {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 2em;
+  }
+
+  &-item {
+    text-align: center;
+
+    .text-p {
+      text-align: justify;
+    }
+  }
+
+  &-icon {
+    color: $cTextWhite;
+    background-color: $cPrimaryLight;
+    padding: 1em;
+
+    border-radius: 50%;
+
+    &.fa {
+      font-size: 2.5em;
+    }
+  }
+}
+
+/* 
+ ======= This Section Contact ==========
+*/
+.contact {
+  &-box {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 1em;
+  }
+
+  &-content {
+    border-radius: 0.5em;
+    padding: 1em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $cBg;
+
+    &__item {
+      display: flex;
+      margin: 1em 0.5em;
+      align-items: center;
+    }
+  }
+
+  &-item__text {
+    margin-left: .8em;
+
+    .text-title {
+      margin: 0;
+    }
+
+    .text-p {
+      margin: 5px;
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    color: $cTextWhite;
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: $cPrimaryLight;
+
+    &.fa {
+      font-size: 1.3em !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-form {
+    &__item {
+      display: grid;
+
+      // label {
+      //   margin: .3em 0;
+      // }
+
+      .form-input {
+        background: $cTextWhite;
+        border: 1px solid $cPrimaryLight;
+        border-radius: 5px;
+        padding: .3em;
+        margin: .3em 0 1em;
+      }
+
+      .form-button {
+        background-color: $cPrimaryLight;
+        border-radius: 5px;
+        padding: .5em;
+        color: $cTextWhite;
+        border: none;
+
+        &:hover {
+          background-color: $cPrimary;
+
+        }
+      }
+
+    }
   }
 }
