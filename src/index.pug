@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="es")
+html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -8,100 +8,102 @@ html(lang="es")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
   body
     .body-box
-      .icon-hamburger
+      .icon-hamburger#icon-hamburger
         span.fa.fa-bars
-      header.header-box
+      header.header-box#header-principal
         .avatar
           .avatar-img
-            img.img-perfil(src="img/avatar.jpg", alt="Jerry-apaza")
+            img.img-perfil(src="img/avatar.jpeg", alt="Jerry-apaza")
           h2 Jerry Apaza
         .contact
-          a(href="http://")
+          a(href="https://www.instagram.com/jerryapazayllatupa/"  target="_blank")
             span.span-icon.fa.fa-instagram
-          a(href="http://")
+          a(href="https://www.linkedin.com/in/jerry-apaza/"  target="_blank")
             span.span-icon.fa.fa-linkedin
-          a(href="http://")
+          a(href="https://github.com/JerryApazaYllatupa"  target="_blank")
             span.span-icon.fa.fa-github
-          a(href="http://")
-            span.span-icon.fa.fa-envelope
+          a(href="https://twitter.com/Jerry70843874" target="_blank")
+            span.span-icon.fa.fa-twitter
+          a(href="https://api.whatsapp.com/send?phone=984002665&text=&source=&data=&app_absent=" target="_blank")
+            span.span-icon.fa.fa-whatsapp
 
         .menu
-          ul.menu-ul
+          ul.menu-ul#menu-principal
             li.menu-item
-              a(href="#") 
+              a(href="#Home") 
                 span.span-icon.fa.fa-home
                 span Home
             li.menu-item
-              a(href="#") 
+              a(href="#About") 
                 span.span-icon.fa.fa-user
                 span About
             li.menu-item
-              a(href="#") 
+              a(href="#Resume") 
                 span.span-icon.fa.fa-file-text
                 span Resume
             li.menu-item
-              a(href="#") 
+              a(href="#Portfolio") 
                 span.span-icon.fa.fa-briefcase
                 span Portafolio
             li.menu-item
-              a(href="#")
+              a(href="#Services")
                 span.span-icon.fa.fa-database  
                 span Services
             li.menu-item
-              a(href="#")
+              a(href="#Contact")
                 span.span-icon.fa.fa-envelope
                 span Contact 
           
         .footer
-          p © Copyright and 
-          p Designed by jerryapaza
+          p © Copyright and  Designed by jerryapaza
       main.main-box
         .box-container
-          section.slider
-            img.slider-photo(src="img/photo-man.jpg", alt="Jerry Apaza")
+          section.slider#Home
+            img.slider-photo(src="img/slider-jerry-apaza.jpeg", alt="Jerry Apaza")
+            .slider-capa
             .slider-text
               h1.slider-text__name Jerry Apaza
-              h2.slier-text__description Programador web
-          section.about.section-container
-            h1.text-title  Sobre mi
-            p.text-p Desarrollador Web y Programador backend, estando en retos y aprendiendo todo el tiempo y así brindar soluciones. investigador, y dispuesto a seguir enfrentando retos.
-            h2.text-title Cualidades y Valores
+              h2.slier-text__description Web Programmer
+          section.about.section-container#About
+            h1.text-title  About
+            p.text-p Web Developer and Backend Programmer, being in challenges and learning all the time and thus provide solutions. researcher, and willing to continue facing challenges.
+            h2.text-title Qualities and Values
             .about-values
-              p.values-text Autodidacta
-              p.values-text Aprendizaje rapido
-              p.values-text Perseverante
-              p.values-text Proactivo
+              p.values-text Autodidact
+              p.values-text Fast learning
+              p.values-text Persistent
+              p.values-text Proactive
               span.values-line
 
-            h2.text-title Infomación
+            h2.text-title Information
             .information-box
               .info-box
-                a(href="#") 
+                a(href="https://api.whatsapp.com/send?phone=984002665&text=&source=&data=&app_absent=" target="_blank") 
                   span.info-icon.fa.fa-whatsapp
                   span +51 984002665
-                a(href="#") 
+                a(href="tel:+51984002665" target="_blank") 
                   span.info-icon.fa.fa-phone
                   span +51 984002665
-                a(href="#") 
+                a(href="mailto:jerryapaza8@gmail.com" target="_blank") 
                   span.info-icon.fa.fa-envelope-open
                   span jerryapaza8@gmail.com
               .info-box
-                a(href="#") 
+                .info-box__item
                   span.info-icon.fa.fa-check-square
-                  span Freelance:  Disponible
-                a(href="#") 
+                  span.text-p Freelance:  Disponible
+                .info-box__item
                   span.info-icon.fa.fa-id-card
-                  span Años:  22
-                a(href="#") 
+                  span.text-p Años:  22
+                .info-box__item
                   span.info-icon.fa.fa-map-marker
-                  span Pais: Cusco Peru
+                  span.text-p Pais: Cusco Peru
           section.skills.section-container
-            h1.text-title Habilidades
-            p.text-p Me encanta solucinar problemas y estar en desafios todo el tiempo, mi pasion por la tecnologia me llevado especialzarme en el desarrollo web y la progamación para asi poder aportar soluciones y afrontar retos 
+            h1.text-title Skills
+            p.text-p I love solving problems and being in challenges all the time.
             .skill-box
               .skill-container
                 span.skill-icon.fa.fa-code
-                h2.text-title.title-2  Desarrollador  Frontend
+                h2.text-title.title-2  Frontend Developer
                 p.text-p HTML5
                 p.text-p CSS
                 p.text-p JavaScript
@@ -116,7 +118,7 @@ html(lang="es")
                
               .skill-container
                 span.skill-icon.fa.fa-code-fork
-                h2.text-title.title-2  Programador Backend
+                h2.text-title.title-2 Backend Programmer
                 p.text-p Php
                 p.text-p Laravel
                 p.text-p Python
@@ -126,14 +128,14 @@ html(lang="es")
                 p.text-p Firebase
                 p.text-p go
                 span.skill-icon.fa.fa-database
-                h2.text-title.title-2  Base de datos
+                h2.text-title.title-2 Data base
                 p.text-p Mysql
                 p.text-p MongoDB
             
 
               .skill-container
                 span.skill-icon.fa.fa-cogs
-                h2.text-title.title-2 Otras tecnologias
+                h2.text-title.title-2 Other technologies
                 p.text-p Git
                 p.text-p Github
                 p.text-p NPM
@@ -141,71 +143,71 @@ html(lang="es")
                 p.text-p Ubuntu 
                 p.text-p Slack
                 p.text-p Postman
-          section.resume.section-container
+          section.resume.section-container#Resume
             h1.text-title  Resumen
             .resume-content
               span.resume-icon.resume-icon__especial.fa.fa-graduation-cap
-              h2.text-title.title-2   Desarrollo de sistemas de información
-              p.text-p Instituto privado tecnologico KHIPU  01/03/2016 A 01/01/2019  
+              h2.text-title.title-2  Information Systems Development
+              p.text-p KHIPU Technological Private Institute 03/01/2016 TO 01/01/2019
             .resume-content  
               span.resume-line
               span.resume-icon.fa.fa-html5
-              h2.text-title.title-2   Desarrollador web
+              h2.text-title.title-2 Web Developer
               p.text-p Portal of light  10/01/2019 a 29/06/2019  
-              p.text-p logrando mejorar las ventas en la empresa, renobando, diseñando e implementando nuevas paginas desde cero 
+              p.text-p Achieving better sales in the company, performing the design, developing and implementing implementing web pages and a web application with Css3, Html, 5 Javascript, Php and Mysql 
             .resume-content  
               span.resume-line
               span.resume-icon.resume-icon__especial.fa.fa-server
-              h2.text-title.title-2   Programdor web freelance
-              p.text-p 01 /07/2019 - Actual  
-              p.text-p Hasta este tiempo logramos con un equipo de trabajo realizar, paginas web, aplicaciones web para pequeñas y medianas empresas, estudiando nuevas tecnologias web y aplicado en los proyectos  
-          section.portfolio.section-container
-            h1.text-title Portafolio
+              h2.text-title.title-2 Programmer Web Freelance
+              p.text-p 07/01/2019 - Current  
+              p.text-p Developing web pages and applications with technologies, React, Node.js, firebase, Mongodb, javascript, python
+          section.portfolio.section-container#Portfolio
+            h1.text-title Portfolio
             p.text-p
             .portfolio-content
               .portfolio-box
-                img.portfolio-img(src="img/img-portfolio.jpg", alt="Desarrollor-web")
+                img.portfolio-img(src="img/img-portfolio.jpeg", alt="Desarrollor-web")
                 h2.text-title.title-2 Aplicación web de Contructura 
                 p.text-p Desarrollado y programado  con la tecnologia react, firebase
                 .portfolio-buttons
-                  a.portfolio-buttons__link(href="#" target="_blanck") 
+                  a.portfolio-buttons__link(href="#" target="_blank") 
                     span.portfolio-icon.fa.fa-external-link
-                  a.portfolio-buttons__link(href="#" target="_blanck")
+                  a.portfolio-buttons__link(href="#" target="_blank")
                     span.portfolio-icon.fa.fa-github
               .portfolio-box
-                img.portfolio-img(src="img/img-portfolio.jpg", alt="Desarrollor-web")
+                img.portfolio-img(src="img/img-portfolio.jpeg", alt="Desarrollor-web")
                 h2.text-title.title-2 Aplicación web de Contructura 
                 p.text-p Desarrollado y programado  con la tecnologia react, firebase
                 .portfolio-buttons
-                  a.portfolio-buttons__link(href="#" target="_blanck") 
+                  a.portfolio-buttons__link(href="#" target="_blank") 
                     span.portfolio-icon.fa.fa-external-link
-                  a.portfolio-buttons__link(href="#" target="_blanck")
+                  a.portfolio-buttons__link(href="#" target="_blank")
                     span.portfolio-icon.fa.fa-github
               .portfolio-box
-                img.portfolio-img(src="img/img-portfolio.jpg", alt="Desarrollor-web")
+                img.portfolio-img(src="img/img-portfolio.jpeg", alt="Desarrollor-web")
                 h2.text-title.title-2 Aplicación web de Contructura 
                 p.text-p Desarrollado y programado  con la tecnologia react, firebase
                 .portfolio-buttons
-                  a.portfolio-buttons__link(href="#" target="_blanck") 
+                  a.portfolio-buttons__link(href="#" target="_blank") 
                     span.portfolio-icon.fa.fa-external-link
-                  a.portfolio-buttons__link(href="#" target="_blanck")
+                  a.portfolio-buttons__link(href="#" target="_blank")
                     span.portfolio-icon.fa.fa-github
-          section.services.section-container
+          section.services.section-container#Services
             h1.text-title Services
             .services-content
               .services-item
                 span.services-icon.fa.fa-file-code-o
-                h2.text-title.title-2 Creación de Paginas Webs
-                p.text-p Desarrollo de paginas Webs a medida del cliente, que son paginas informativas, Blogs, Portafolios, Marca de empresa, Marca personal, Landing page
+                h2.text-title.title-2 Creation of Web Pages
+                p.text-p Development of web pages tailored to the client, which are information pages, Blogs, Portfolios, Company brand, Personal brand, Landing page
               .services-item
                 span.services-icon.fa.fa-shopping-cart
-                h2.text-title.title-2 Creación de Aplicaciones Webs
-                p.text-p Desarrollado y programación de aplicaciones Webs, que son paginas con base de datos ejemplo: Registro de datos, reserva de servicios, woocommerce.
+                h2.text-title.title-2 Creation of Web Applications
+                p.text-p Developed and programming of Web applications, which are pages with an example database: Data registration, reservation of services, woocommerce.
               .services-item
                 span.services-icon.fa.fa-user-secret
-                h2.text-title.title-2 Mantenimiento y seguridad en Web 
-                p.text-p Actualizar, Reprar fallos, Actualización de datos, Integrar servicios, Renovación a las tecnologias actuales y pentesting para prevenir vulnerarbilidades de ataques externos.
-          section.contact.section-container
+                h2.text-title.title-2 Web Maintenance and Security
+                p.text-p Update, repair bugs, Update data, Integrate services, Renewal to current technologies and pentesting to prevent vulnerabilities from external attacks.
+          section.contact.section-container#Contact
             h1.text-title Contact
             .contact-box
               .contact-content
@@ -218,29 +220,30 @@ html(lang="es")
                   span.contact-icon.fa.fa-envelope
                   .contact-item__text
                     h2.text-title.title-2 E-mail:
-                    p.text-p jerryapaza8@gmail.com
+                    p.text-p jerryapaza8 @gmail.com
                 .contact-content__item
                   span.contact-icon.fa.fa-phone
                   .contact-item__text
                     h2.text-title.title-2 Call:
-                    a(href="#") +51 984 002665
+                    a(href="tel:+51984002665" target="_blank") +51 984 002665
                 .contact-content__item
-                  img.contact-google-maps(src="img/google-maps.png", alt="jerry apaza")
+                  img.contact-google-maps(src="img/google-maps.jpeg", alt="jerry apaza")
                 
               .contact-content
                 form.contact-form(action="")
                   .contact-form__item
-                    label.text-title.title-2(for="") Your Name
-                    input.form-input(type="text")
+                    label.text-title.title-2(for="#name") Your Name
+                    input.form-input#name(type="text")
                   .contact-form__item
-                    label.text-title.title-2(for="") Your Email
-                    input.form-input(type="email")
+                    label.text-title.title-2(for="#email") Your Email
+                    input.form-input#email(type="email")
                   .contact-form__item
-                    label.text-title.title-2(for="") Subject
-                    input.form-input(type="text")
+                    label.text-title.title-2(for="#subject") Subject
+                    input.form-input#subject(type="text")
                   .contact-form__item
-                    label.text-title.title-2(for="") Message
-                    textarea.form-input(name="", cols="30", rows="10")
+                    label.text-title.title-2(for="#message") Message
+                    textarea.form-input#message(name="", cols="30", rows="10")
                   .contact-form__item
-                    input.form-button(type="submit" value=" Send Message")
+                    input.form-button#btn-send(type="submit" value=" Send Message")
+    script(src="js/app.js")
     

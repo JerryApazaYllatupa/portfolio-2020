@@ -6,23 +6,23 @@
 */
 
 :root {
-  // primary variables
-  --colorPrimary: #08484d;
-  --colorPrimaryLigth: #097e86;
-  --colorSecondary: #235171;
-  --colorHover: #00bfff;
-  --colorText: #686868;
-  --colorTextWhite: #fff;
-  --colorBg: #f4f4f4;
-  --transparent: rgba(0, 0, 0, 0);
+	// primary variables
+	--colorPrimary: #08484d;
+	--colorPrimaryLigth: #097e86;
+	--colorSecondary: #235171;
+	--colorHover: #00bfff;
+	--colorText: #686868;
+	--colorTextWhite: #fff;
+	--colorBg: #f4f4f4;
+	--transparent: rgba(0, 0, 0, 0);
 
-  //secondary variables
-  --maxWith: 1300px;
-  --widthaside: 300px;
-  --widthasideright: 260px;
-  --widthcontent: calc(100% - var(--widthasideright));
-  --fontFamily: 'Kurale', serif;
-  --fontText: 'Monospase';
+	//secondary variables
+	--maxWith: 1300px;
+	--widthaside: 300px;
+	--widthasideright: 260px;
+	--widthcontent: calc(100% - var(--widthasideright));
+	--fontFamily: 'Kurale', serif;
+	--fontText: 'Monospase';
 }
 
 // scss variables
@@ -45,202 +45,244 @@ $maxWith: var(--maxWith);
 */
 
 body {
-  font-family: $font;
+	font-family: $font;
 }
 
 p {
-  font-family: $fontText;
+	font-family: $fontText;
 }
 
+
+
 .text-p {
-  color: $cText;
-  text-align: center;
+	color: $cText;
+	text-align: center;
 }
 
 .text-title {
-  color: $cSecondary;
-  font-size: 1.5em;
-  text-align: center;
+	color: $cSecondary;
+	font-size: 1.5em;
+	text-align: center;
 
-  @include from {
-    font-size: 2em;
-
-  }
+	@include from {
+		font-size: 2em;
+	}
 }
 
 .title-2 {
-  font-size: 1.3em;
+	font-size: 1.3em;
 }
 
 .section-container {
-  padding: 1em;
-  margin: auto;
+	padding: 1em;
+	margin: auto;
 
-  @include from {
-    max-width: $maxWith;
-  }
+	@include from {
+		max-width: $maxWith;
+	}
 }
 
 .body-box {
-  .icon-hamburger {
-    display: block;
-    font-size: 2em;
-    position: absolute;
-    z-index: 1;
-    cursor: pointer;
+	.icon-hamburger {
+		display: block;
+		font-size: 2em;
+		position: absolute;
+		cursor: pointer;
+		z-index: 3;
+		left: 10px;
 
-    &:hover .fa {
-      color: $cPrimary;
-    }
+		&:hover .fa {
+			color: $cPrimaryLight;
+		}
 
-    & .fa {
-      color: white;
-    }
+		& .fa {
+			color: $cTextWhite;
+		}
 
-    @include from {
-      display: none;
-    }
-  }
+		@include from {
+			display: none;
+		}
+	}
 }
 
 .header-box {
-  color: $cTextWhite;
-  position: fixed;
-  width: $whitAside;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: $cPrimary;
-  display: none;
+	color: $cTextWhite;
+	position: fixed;
+	width: $whitAside;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: $cPrimary;
+	display: none;
+	z-index: 2;
 
-  @include from {
-    display: block;
-  }
+	@include from {
+		display: block;
+	}
+
+	&.active {
+		display: block;
+	}
 }
 
 .header-box {
-  & ul {
-    list-style-type: none;
-  }
+	& ul {
+		list-style-type: none;
+	}
 
-  & a {
-    text-decoration: none;
-  }
+	& a {
+		text-decoration: none;
+	}
 
-  & .span-icon.fa {
-    color: white;
-  }
+	& .span-icon.fa {
+		color: white;
+	}
 
-  & .avatar {
-    @include centerFlex;
+	& .avatar {
+		@include centerFlex;
 
-    &-img {
-      width: 135px;
-      height: 135px;
+		&-img {
+			width: 135px;
+			height: 135px;
 
-      .img-perfil {
-        max-width: 100%;
-        height: auto;
-        border: 2px solid white;
-        border-radius: 50%;
-      }
-    }
-  }
+			.img-perfil {
+				max-width: 100%;
+				height: auto;
+				border: 2px solid white;
+				border-radius: 50%;
+			}
+		}
+	}
 
-  & .contact {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    margin: auto auto 2em auto;
-    justify-items: center;
-    width: 80%;
+	& .contact {
+		display: grid;
+		grid-template-columns: repeat(5, auto);
+		margin: auto auto 2em auto;
+		justify-items: center;
+		width: 80%;
 
-    & a {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background-color: $cPrimaryLight;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      font-size: 1.3em;
-      padding: 1em;
+		& a {
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			background-color: $cPrimaryLight;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			font-size: 1.3em;
+			padding: 0.8em;
 
-      &:hover span {
-        color: $cHover;
-      }
-    }
-  }
+			&:hover span {
+				color: $cHover;
+			}
+		}
+	}
 
-  & .menu {
-    &-ul {
-      display: grid;
-      grid-gap: 2em;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      width: 80%;
-      margin: auto;
-    }
+	& .menu {
+		&-ul {
+			display: grid;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			width: 80%;
+			margin: auto;
+		}
 
-    .menu-item {
-      a {
-        color: white;
-        font-size: 1.2em;
-      }
+		.menu-item {
+			border-radius: 5px;
 
-      .span-icon {
-        margin-right: 0.5em;
-      }
+			a {
+				color: white;
+				font-size: 1em;
+				padding: 0.5em;
+				width: 100%;
+				display: block;
+			}
 
-      &:hover a {
-        color: $cHover;
-      }
-    }
-  }
 
-  .footer {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-  }
+
+			.span-icon {
+				margin-right: 0.5em;
+			}
+
+			&:hover a {
+				color: $cHover;
+			}
+
+			&.active {
+				background-color: $cPrimaryLight;
+			}
+		}
+	}
+
+	.footer {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+
+		p {
+			font-size: 0.8em;
+		}
+	}
 }
 
 .main-box {
-  @include from {
-    margin-left: 300px;
-  }
+	@include from {
+		margin-left: 300px;
+	}
 }
 
 /* 
  =========This Section Slider========
 */
 .slider {
-  position: relative;
+	position: relative;
 
-  &-photo {
-    width: 100%;
-    height: auto;
-  }
+	&-photo {
+		width: 100%;
+		height: auto;
+	}
 
-  &-text {
-    color: $cTextWhite;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    @include centerFlex;
+	&-capa {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 
-    &__name {
-      font-size: 2em;
+	@include from() {
+		animation: bg 20s linear infinite alternate;
+		transform: translateY(-10%);
+	}
 
-      @include from(l) {
-        font-size: 5em;
-      }
-    }
-  }
+	@keyframes bg {
+		to {
+			transform: translateY(0.1%);
+		}
+	}
+
+	&-text {
+		color: $cTextWhite;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		@include centerFlex;
+
+		&__name {
+			font-size: 2em;
+			margin: 0;
+
+			@include from(l) {
+				font-size: 5em;
+			}
+		}
+	}
 }
 
 /* 
@@ -249,129 +291,131 @@ p {
 */
 
 .about-values {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	flex-wrap: wrap;
 
-  .values-text {
-    padding: .5em 2em;
-    color: $cTextWhite;
-    background-color: $cPrimaryLight;
-    border-radius: 50px;
+	.values-text {
+		padding: 0.5em 2em;
+		color: $cTextWhite;
+		background-color: $cPrimaryLight;
+		border-radius: 50px;
 
-    @include from {
-      padding: 1em 2em;
+		@include from {
+			padding: 1em 2em;
+		}
+	}
 
-    }
-  }
-
-  .values-line {
-    position: absolute;
-    width: 100%;
-    display: block;
-    height: 5px;
-    background-color: $cPrimaryLight;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: -1;
-    border-radius: 10px;
-  }
-
+	.values-line {
+		position: absolute;
+		width: 100%;
+		display: block;
+		height: 5px;
+		background-color: $cPrimaryLight;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: -1;
+		border-radius: 10px;
+	}
 }
 
 .information-box {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
-  background-color: $cBg;
-  border-radius: 10px;
-  padding: 2em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color: $cBg;
+	border-radius: 10px;
+	padding: 2em;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  .info-box {
-    display: grid;
-    width: 300px;
+	.info-box {
+		display: grid;
+		width: 300px;
 
-    a {
-      color: $cText;
-      text-decoration: none;
-      margin: .5em;
-    }
+		&__item {
+			margin: 0.5em;
+		}
 
-    .info-icon {
-      color: $cPrimaryLight;
-      margin-right: 0.5em;
-      font-size: 1.5em;
-    }
-  }
+		a {
+			color: $cText;
+			text-decoration: none;
+			margin: 0.5em;
+		}
 
-  @include from {
-    padding: 1em;
-    justify-content: space-around;
-  }
+		.info-icon {
+			color: $cPrimaryLight;
+			margin-right: 0.5em;
+			font-size: 1.5em;
+		}
+	}
+
+	@include from {
+		padding: 1em;
+		justify-content: space-around;
+	}
 }
 
 /* 
  ======= This Section skills ==========
 */
 .skill-box {
-  display: grid;
+	display: grid;
 
-  grid-gap: 1em;
-  justify-content: center;
+	grid-gap: 1em;
+	justify-content: center;
 
-  .skill-container {
-    padding: 1em 2em;
-    background-color: $cBg;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	.skill-container {
+		padding: 1em 2em;
+		background-color: $cBg;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    .skill-icon {
-      font-size: 4em;
-      color: $cPrimaryLight;
-    }
-  }
+		.skill-icon {
+			font-size: 4em;
+			color: $cPrimaryLight;
+		}
+	}
 
-  @include from {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1.5em;
-  }
+	@include from {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 1.5em;
+	}
 }
 
 /* 
  ======= This Section skills ==========
 */
 .resume {
-  .resume-content {
-    text-align: center;
-  }
+	.resume-content {
+		text-align: center;
+	}
 
-  .resume-icon {
-    font-size: 5em;
-    color: $cPrimaryLight;
-    border: 2px solid;
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
-    padding: 0.3em;
-  }
+	.resume-icon {
+		font-size: 5em;
+		color: $cPrimaryLight;
+		border: 2px solid;
+		width: 120px;
+		height: 120px;
+		border-radius: 100px;
+		padding: 0.3em;
+	}
 
-  .resume-icon__especial {
-    font-size: 4.2em;
-  }
+	.resume-icon__especial {
+		font-size: 4.2em;
+	}
 
-  .resume-line {
-    width: 3px;
-    height: 50px;
-    background-color: $cPrimaryLight;
-    display: block;
-    text-align: center;
-    margin: 1em auto;
-    border-radius: 2px;
-  }
+	.resume-line {
+		width: 3px;
+		height: 50px;
+		background-color: $cPrimaryLight;
+		display: block;
+		text-align: center;
+		margin: 1em auto;
+		border-radius: 2px;
+	}
 }
 
 /* 
@@ -379,41 +423,39 @@ p {
 */
 
 .portfolio {
-  .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1em;
-  }
+	.portfolio-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 1em;
+	}
 
-  .portfolio-box {
-    border-radius: 0.8em;
-    text-align: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: $cBg;
+	.portfolio-box {
+		border-radius: 0.8em;
+		text-align: center;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		background-color: $cBg;
 
-    padding: 1em;
-  }
+		padding: 1em;
+	}
 
+	.portfolio-buttons {
+		&__link {
+			color: $cTextWhite;
+		}
+	}
 
+	.portfolio-icon {
+		background-color: $cPrimaryLight;
+		border-radius: 50%;
+		font-size: 1.5em;
+		padding: 0.4em;
+		margin: 0 1em;
+	}
 
-  .portfolio-buttons {
-    &__link {
-      color: $cTextWhite;
-    }
-  }
-
-  .portfolio-icon {
-    background-color: $cPrimaryLight;
-    border-radius: 50%;
-    font-size: 1.5em;
-    padding: 0.4em;
-    margin: 0 1em;
-  }
-
-  .portfolio-img {
-    max-width: 100%;
-    height: auto;
-  }
+	.portfolio-img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 /* 
@@ -421,125 +463,127 @@ p {
 */
 
 .services {
-  &-content {
-    display: grid;
-    justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 2em;
-  }
+	&-content {
+		display: grid;
+		justify-content: space-around;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 2em;
+	}
 
-  &-item {
-    text-align: center;
-    border: 2px solid $cPrimaryLight;
-    border-radius: 10px;
-    padding: .8em;
+	&-item {
+		text-align: center;
+		border: 2px solid $cPrimaryLight;
+		border-radius: 10px;
+		padding: 0.8em;
 
-    .text-p {
-      text-align: justify;
-    }
-  }
+		.text-p {
+			text-align: justify;
+		}
+	}
 
-  &-icon {
-    color: $cTextWhite;
-    background-color: $cPrimaryLight;
-    padding: 1em;
+	&-icon {
+		color: $cTextWhite;
+		background-color: $cPrimaryLight;
+		padding: 1em;
 
-    border-radius: 50%;
+		border-radius: 50%;
 
-    &.fa {
-      font-size: 2.5em;
-    }
-  }
+		&.fa {
+			font-size: 2.5em;
+		}
+	}
 }
 
 /* 
  ======= This Section Contact ==========
 */
 .contact {
-  &-box {
-    display: grid;
-    grid-gap: 1em;
+	&-box {
+		display: grid;
+		grid-gap: 1em;
 
-    @include from {
-      grid-template-columns: 40% auto;
-    }
-  }
+		@include from {
+			grid-template-columns: 40% auto;
+		}
+	}
 
-  &-content {
-    border-radius: 0.5em;
-    padding: 1em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: $cBg;
+	&-content {
+		border-radius: 0.5em;
+		padding: 1em;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		background-color: $cBg;
 
-    &__item {
-      display: flex;
-      margin: 1em 0.5em;
-      align-items: center;
-    }
-  }
+		&__item {
+			display: flex;
+			margin: 1em 0.5em;
+			align-items: center;
+			flex-wrap: wrap;
 
-  .text-title {
-    margin: 0;
-    text-align: start;
-  }
+			a {
+				color: $cText;
+				text-decoration: none;
+			}
+		}
+	}
 
-  &-item__text {
-    margin-left: .8em;
+	.title-2 {
+		margin: 0;
+		text-align: start;
+	}
 
+	&-item__text {
+		margin-left: 0.8em;
 
+		.text-p {
+			margin: 5px;
+		}
+	}
 
-    .text-p {
-      margin: 5px;
-    }
-  }
+	&-icon {
+		width: 40px;
+		height: 40px;
+		color: $cTextWhite;
+		border-radius: 50%;
+		padding: 0.5em;
+		background-color: $cPrimaryLight;
 
-  &-icon {
-    width: 40px;
-    height: 40px;
-    color: $cTextWhite;
-    border-radius: 50%;
-    padding: 0.5em;
-    background-color: $cPrimaryLight;
+		&.fa {
+			font-size: 1.3em !important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 
-    &.fa {
-      font-size: 1.3em !important;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+	&-google-maps {
+		width: 100%;
+		height: auto;
+	}
 
-  &-google-maps {
-    width: 100%;
-    height: auto;
-  }
+	&-form {
+		&__item {
+			display: grid;
 
-  &-form {
-    &__item {
-      display: grid;
+			.form-input {
+				background: $cTextWhite;
+				border: 1px solid $cPrimaryLight;
+				border-radius: 5px;
+				padding: 0.3em;
+				margin: 0.3em 0 1em;
+				width: 100%;
+			}
 
+			.form-button {
+				background-color: $cPrimaryLight;
+				border-radius: 5px;
+				padding: 0.5em;
+				color: $cTextWhite;
+				border: none;
 
-      .form-input {
-        background: $cTextWhite;
-        border: 1px solid $cPrimaryLight;
-        border-radius: 5px;
-        padding: .3em;
-        margin: .3em 0 1em;
-      }
-
-      .form-button {
-        background-color: $cPrimaryLight;
-        border-radius: 5px;
-        padding: .5em;
-        color: $cTextWhite;
-        border: none;
-
-        &:hover {
-          background-color: $cPrimary;
-
-        }
-      }
-
-    }
-  }
+				&:hover {
+					background-color: $cPrimary;
+				}
+			}
+		}
+	}
 }
