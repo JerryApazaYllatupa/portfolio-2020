@@ -889,6 +889,8 @@ Object(_library_library__WEBPACK_IMPORTED_MODULE_0__["listener"])(menu, 'click',
     clearItem(li);
     span.classList.add('active');
   }
+
+  header.classList.toggle("active");
 }); //  clear item active 
 
 var clearItem = function clearItem(li) {

@@ -52,8 +52,6 @@ p {
 	font-family: $fontText;
 }
 
-
-
 .text-p {
 	color: $cText;
 	text-align: center;
@@ -84,15 +82,21 @@ p {
 
 .body-box {
 	.icon-hamburger {
-		display: block;
+		display: flex;
 		font-size: 2em;
-		position: absolute;
+		position: fixed;
 		cursor: pointer;
 		z-index: 3;
 		left: 10px;
+		background-color: $cPrimaryLight;
+		padding: 0.2em;
+		top: 2px;
+		height: 44px;
+		color: $cPrimary;
+		border-radius: 3px;
 
 		&:hover .fa {
-			color: $cPrimaryLight;
+			color: $cSecondary;
 		}
 
 		& .fa {
@@ -199,8 +203,6 @@ p {
 				width: 100%;
 				display: block;
 			}
-
-
 
 			.span-icon {
 				margin-right: 0.5em;

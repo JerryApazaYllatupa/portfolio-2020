@@ -39,7 +39,7 @@ listener(menu, 'click', (e) => {
       clearItem(li)
       span.classList.add('active')
    }
-
+   header.classList.toggle("active")
 })
 
 //  clear item active 

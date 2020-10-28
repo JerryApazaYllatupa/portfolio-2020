@@ -453,16 +453,22 @@ p {
 }
 
 .body-box .icon-hamburger {
-  display: block;
+  display: flex;
   font-size: 2em;
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   z-index: 3;
   left: 10px;
+  background-color: var(--colorPrimaryLigth);
+  padding: 0.2em;
+  top: 2px;
+  height: 44px;
+  color: var(--colorPrimary);
+  border-radius: 3px;
 }
 
 .body-box .icon-hamburger:hover .fa {
-  color: var(--colorPrimaryLigth);
+  color: var(--colorSecondary);
 }
 
 .body-box .icon-hamburger .fa {

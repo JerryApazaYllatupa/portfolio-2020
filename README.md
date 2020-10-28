@@ -1,8 +1,10 @@
-# portfolio-2020
-portfolio project with scss pug and js
+# Portfolio Jerry Apaza Yllatupa
+
+Portfolio project with scss pug and js deploy firebase-hosting
 https://jerryapaza.com/
-## How to run the proyect 
+
+## How to run the proyect
+
 ```bash
 npm run watch
 ```
-
