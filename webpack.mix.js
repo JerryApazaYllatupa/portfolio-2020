@@ -27,9 +27,9 @@ mix
     open: false
   })
  /*  .options({
-  processCssUrls: true,
-  purifyCss: false,
-  postCss: []
+ processCssUrls: true,
+ purifyCss: false,
+ postCss: []
 }); */
 
 // Full API

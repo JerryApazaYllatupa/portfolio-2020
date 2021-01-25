@@ -11,7 +11,6 @@ import {
 
 
 
-
 // =============== Section menu  ==============
 let active = getId("icon-hamburger"),
    menu = getId("menu-principal"),
@@ -41,6 +40,7 @@ listener(menu, 'click', (e) => {
    }
    header.classList.toggle("active")
 })
+
 
 //  clear item active 
 let clearItem = (li) => {

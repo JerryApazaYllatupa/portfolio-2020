@@ -1053,8 +1053,8 @@ var ajax = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/jerry/proyectos/portafolio/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /home/jerry/proyectos/portafolio/src/scss/app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! /home/jeki/proyectos/portafolio/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /home/jeki/proyectos/portafolio/src/scss/app.scss */"./src/scss/app.scss");
 
 
 /***/ })

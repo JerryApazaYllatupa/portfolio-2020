@@ -390,13 +390,12 @@ template {
 */
 
 :root {
-  --colorPrimary: #08484d;
-  --colorPrimaryLigth: #097e86;
-  --colorSecondary: #235171;
-  --colorHover: #00bfff;
-  --colorText: #686868;
+  --colorPrimary: #060924;
+  --colorPrimaryLigth: #4caf50;
+  --colorSecondary: #f0f0f0;
+  --colorTree: #182f43;
+  --colorText: #d8d8d8;
   --colorTextWhite: #fff;
-  --colorBg: #f4f4f4;
   --transparent: rgba(0, 0, 0, 0);
   --maxWith: 1300px;
   --widthaside: 300px;
@@ -418,6 +417,14 @@ body {
 
 p {
   font-family: var(--fontText);
+}
+
+.main-box {
+  background: #0f0c29;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .text-p {
@@ -556,7 +563,7 @@ p {
 }
 
 .header-box .contact a:hover span {
-  color: var(--colorHover);
+  color: brightness(130%);
 }
 
 .header-box .menu-ul {
@@ -585,7 +592,7 @@ p {
 }
 
 .header-box .menu .menu-item:hover a {
-  color: var(--colorHover);
+  color: brightness(130%);
 }
 
 .header-box .menu .menu-item.active {
@@ -716,7 +723,7 @@ p {
 .information-box {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--colorBg);
+  background-color: var(--colorPrimary);
   border-radius: 10px;
   padding: 2em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -762,7 +769,7 @@ p {
 
 .skill-box .skill-container {
   padding: 1em 2em;
-  background-color: var(--colorBg);
+  background-color: var(--colorPrimary);
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -826,7 +833,7 @@ p {
   border-radius: 0.8em;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: var(--colorBg);
+  background-color: var(--colorPrimary);
   padding: 1em;
 }
 
@@ -899,7 +906,7 @@ p {
   border-radius: 0.5em;
   padding: 1em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: var(--colorBg);
+  background-color: var(--colorPrimary);
 }
 
 .contact-content__item {

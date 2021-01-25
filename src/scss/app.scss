@@ -7,13 +7,13 @@
 
 :root {
 	// primary variables
-	--colorPrimary: #08484d;
-	--colorPrimaryLigth: #097e86;
-	--colorSecondary: #235171;
-	--colorHover: #00bfff;
-	--colorText: #686868;
+	--colorPrimary: #060924;
+	--colorPrimaryLigth: #4caf50;
+	--colorSecondary: #f0f0f0;
+	--colorTree: #182f43;
+
+	--colorText: #d8d8d8;
 	--colorTextWhite: #fff;
-	--colorBg: #f4f4f4;
 	--transparent: rgba(0, 0, 0, 0);
 
 	//secondary variables
@@ -29,10 +29,11 @@
 $font: var(--fontFamily);
 $cPrimary: var(--colorPrimary);
 $cPrimaryLight: var(--colorPrimaryLigth);
+$cTree: var(--colorTree);
 $cSecondary: var(--colorSecondary);
-$cBg: var(--colorBg);
+$cBg: var(--colorPrimary);
 $cText: var(--colorText);
-$cHover: var(--colorHover);
+$cHover: brightness(130%);
 $cTextWhite: var(--colorTextWhite);
 $whitAside: var(--widthaside);
 $fontText: var(--fontText);
@@ -50,6 +51,10 @@ body {
 
 p {
 	font-family: $fontText;
+}
+
+.main-box {
+	@include Bgradient;
 }
 
 .text-p {
