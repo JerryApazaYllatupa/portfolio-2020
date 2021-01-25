@@ -451,6 +451,10 @@ p {
 		}
 	}
 
+	.link-disable {
+		filter: brightness(0.5);
+	}
+
 	.portfolio-icon {
 		background-color: $cPrimaryLight;
 		border-radius: 50%;

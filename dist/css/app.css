@@ -841,6 +841,10 @@ p {
   color: var(--colorTextWhite);
 }
 
+.portfolio .link-disable {
+  filter: brightness(0.5);
+}
+
 .portfolio .portfolio-icon {
   background-color: var(--colorPrimaryLigth);
   border-radius: 50%;
